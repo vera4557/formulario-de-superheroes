@@ -2,23 +2,28 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f7f7;
+    background-color: #f5f5f5;
 }
 
 .container {
     max-width: 800px;
     margin: 20px auto;
-    background-color: rgb(253, 253, 253);
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    border: 1px solid #ddd;
+    border-radius: 8px;
     overflow: hidden;
+    background-color: white;
 }
 
 .header {
-    padding: 15px;
-    border-bottom: 1px solid #e0e0e0;
-    font-size: 18px;
-    font-weight: bold;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
 }
 
 .form-container {
@@ -26,9 +31,9 @@ body {
 }
 
 .form-title {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .form-row {
@@ -43,54 +48,120 @@ body {
     min-width: 250px;
 }
 
-label {
+.form-group label {
     display: block;
-    font-size: 14px;
     margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-input[type="text"],
-input[type="date"],
-select {
+.form-group input, .form-group select {
     width: 100%;
-    padding: 10px;
+    padding: 8px 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    background-color: #eaecef;
-    box-sizing: border-box;
+    background-color: #ebedf0;
+    font-size: 14px;
 }
 
-.actions {
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #666;
+}
+
+.button-group {
     margin-top: 20px;
     display: flex;
     gap: 10px;
 }
 
 .btn {
-    padding: 10px 15px;
+    padding: 8px 15px;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
+    color: white;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .btn-primary {
     background-color: #007bff;
-    color: white;
 }
 
 .btn-danger {
     background-color: #dc3545;
-    color: white;
 }
 
 .btn-dark {
-    background-color: #343a40;
-    color: white;
+    background-color: #212529;
 }
 
-.small-text {
-    font-size: 12px;
+/* Estilos para el registro de trajes */
+.trajes-container {
+    margin-top: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    display: none; /* Oculto por defecto */
+}
+
+.trajes-title {
+    color: #0d6efd;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.trajes-description {
     color: #666;
-    margin-top: 2px;
+    margin-bottom: 20px;
+}
+
+.add-traje-btn {
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.traje-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.traje-label {
+    color: #0d6efd;
+    width: 120px;
+}
+
+.traje-input {
+    flex: 1;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.remove-traje-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

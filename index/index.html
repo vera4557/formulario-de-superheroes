@@ -8,10 +8,12 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">Mis Héroes</div>
+        <div class="header">
+            <h1>Mis Heroes</h1>
+        </div>
         
         <div class="form-container">
-            <div class="form-title">Gestión de Héroes</div>
+            <div class="form-title">Gestión de Heroes</div>
             
             <form id="hero-form">
                 <div class="form-row">
@@ -28,12 +30,12 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label for="edad-actor">Edad Actor</label>
-                        <input type="text" id="edad-actor" name="edad-actor">
+                        <input type="number" id="edad-actor" name="edad-actor">
                     </div>
                     <div class="form-group">
                         <label for="ubicacion">Ubicación</label>
                         <input type="text" id="ubicacion" name="ubicacion">
-                        <div class="small-text">Nombre de la ciudad de origen</div>
+                        <small>Nombre de la ciudad de origen</small>
                     </div>
                 </div>
                 
@@ -43,7 +45,7 @@
                         <input type="text" id="poster" name="poster">
                     </div>
                     <div class="form-group">
-                        <label for="fecha-ubicacion">Ubicación</label>
+                        <label for="fecha-ubicacion">Ubicacion</label>
                         <input type="date" id="fecha-ubicacion" name="fecha-ubicacion" placeholder="dd/mm/yyyy">
                     </div>
                 </div>
@@ -55,20 +57,36 @@
                             <option value="marvel">Marvel</option>
                             <option value="dc">DC Comics</option>
                             <option value="sony">Sony Pictures</option>
-                            <option value="fox">20th Century Fox</option>
+                            <option value="fox">Fox</option>
                         </select>
                     </div>
                 </div>
                 
-                <div class="actions">
-                    <button type="button" class="btn btn-dark">Nuevo Héroe</button>
-                    <button type="submit" class="btn btn-primary">Guardar Héroe</button>
-                    <button type="reset" class="btn btn-danger">Cancelar</button>
+                <div class="button-group">
+                    <button type="button" class="btn btn-dark" id="nuevo-heroe">Nuevo Heroe</button>
+                    <button type="button" class="btn btn-primary" id="guardar-heroe">Guardar Heroe</button>
+                    <button type="button" class="btn btn-danger" id="cancelar">Cancelar</button>
                 </div>
             </form>
+            
+            <!-- Sección de Registro de Trajes (oculta por defecto) -->
+            <div class="trajes-container" id="trajes-section">
+                <div class="trajes-title">Trajes del personaje</div>
+                <div class="trajes-description">En esta sección podrá registrar los nombres de los trajes usados por el actor en cada una de la películas.</div>
+                
+                <button type="button" class="add-traje-btn" id="add-traje">+</button>
+                
+                <div id="trajes-list">
+                    <!-- Los elementos de traje se agregarán dinámicamente aquí -->
+                    <div class="traje-item">
+                        <label class="traje-label">Nombre traje</label>
+                        <input type="text" class="traje-input">
+                        <button type="button" class="remove-traje-btn">-</button>
+                    </div>
+                </div>
+            </div>
         </div>
-      
-
+    </div>
 
 
 
@@ -76,4 +94,5 @@
 
 
 </body>
+<script src="/script/creacion-heroe.js"></script>
 </html>
